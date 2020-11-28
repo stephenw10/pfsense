@@ -154,6 +154,9 @@ case ${opmode} in
 		links "http://localhost"
 	fi
 	;;
+101)
+	/usr/bin/top -aSH
+	;;	
 "")
 	ps -o command='' -c -p $PPID | grep -E '^sshd$' > /dev/null
 	if [ $? -eq 0 ]; then
